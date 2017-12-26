@@ -98,7 +98,8 @@ export default {
           left: `${this.ontologyOffset.left}px`,
         };
       } else if (this.offsetType === 'bottom' &&
-        (getPageOffset() + (window.innerHeight - this.offsetBottom)) < this.ontologyOffset.top) {
+        (getPageOffset() + (window.innerHeight - this.offsetBottom)) <
+          this.ontologyOffset.top + this.ontologySize.height) {
         this.showSubstitute = true;
         this.substituteStyle = {
           width: `${this.ontologySize.width}px`,
